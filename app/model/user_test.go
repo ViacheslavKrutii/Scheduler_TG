@@ -11,11 +11,11 @@ func TestNewUser(t *testing.T) {
 	want := User{
 		ID:               "12",
 		Name:             "Bob",
-		AllEventsStorage: make(map[EventID]Event),
+		AllEventsStorage: make(map[EventID]*Event),
 	}
 
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("got %q want %q", got, want)
+		t.Errorf("got %v want %v", got, want)
 	}
 
 }
@@ -32,7 +32,7 @@ func TestAddEvent(t *testing.T) {
 	u := User{
 		ID:               "12",
 		Name:             "Bob",
-		AllEventsStorage: make(map[EventID]Event),
+		AllEventsStorage: make(map[EventID]*Event),
 	}
 	u.AddEvent(&e)
 
@@ -55,7 +55,7 @@ func TestDeleteEvent(t *testing.T) {
 	u := User{
 		ID:               "12",
 		Name:             "Bob",
-		AllEventsStorage: map[EventID]Event{"1": e},
+		AllEventsStorage: map[EventID]*Event{"1": &e},
 	}
 	u.DeleteEventByID(e.ID)
 

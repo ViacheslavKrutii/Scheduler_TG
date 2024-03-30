@@ -1,6 +1,6 @@
 package tgAPIcontroller
 
-import "Proj/Scheduler_TG/app/db"
+import "github.com/ViacheslavKrutii/Scheduler_TG/app/db"
 
 type UserController struct {
 	db *db.DbInterface

@@ -8,3 +8,6 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# Tmp dir from air lib
+/tmp/

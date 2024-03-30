@@ -20,3 +20,4 @@ func NewEvent(id EventID, title, message string, days []time.Weekday, time time.
 		Message: message,
 	}
 }
+
