@@ -1,0 +1,12 @@
+# Server configurations
+server:
+  host: "localhost"
+  port: 8000
+
+# Database credentials
+database:
+  host: localhost
+  port: 3306
+  username: root
+  password: root
+  name: your_database_name
