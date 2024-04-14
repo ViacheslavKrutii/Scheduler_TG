@@ -7,10 +7,12 @@ import (
 )
 
 func TestNewUser(t *testing.T) {
-	got := NewUser("12", "Bob")
+	location, _ := time.LoadLocation("America/Los_Angeles")
+	got := NewUser("12", "Bob", *location)
 	want := User{
 		ID:               "12",
 		Name:             "Bob",
+		Location:         *location,
 		AllEventsStorage: make(map[EventID]*Event),
 	}
 

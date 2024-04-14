@@ -10,3 +10,7 @@ database:
   username: root
   password: root
   name: your_database_name
+
+# Telegram credentials
+telegram:
+  token: 
